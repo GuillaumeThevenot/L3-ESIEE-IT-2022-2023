@@ -5,5 +5,10 @@ mkdir $HOME/Temporaire && mkdir $HOME/Temporaire/2019 && mkdir $HOME/Temporaire/
 mkdir $HOME/Projet && mkdir $HOME/Projet/Projet-L3 && mkdir $HOME/Projet/Projet-M1 && mkdir $HOME/Projet/Projet-M2
 
 touch $HOME/Projet/Projet-L3/L3.txt
-touch $HOME/Projet/Projet-M1/M1.txt
+echo > $HOME/Projet/Projet-M1/M1.txt
 touch $HOME/Projet/Projet-M2/M2.txt
+
+
+chmod -w $HOME/Projet/Projet-L3
+chmod -r $HOME/Projet/Projet-M1
+chmod -x $HOME/Projet/Projet-M2
