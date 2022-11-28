@@ -1,5 +1,5 @@
 #!/bin/bash
 
-mkdir Script && mkdir Script/Rep_Perl && mkdir Script/Rep_Shell && mkdir Script/Rep_Shell/Rep_Sh && mkdir Script/Rep_Shell/Rep_Ksh && mkdir Script/Rep_Shell/Rep_Bash && mkdir Script/Python
-mkdir Temporaire && mkdir Temporaire/2019 && mkdir Temporaire/2019/1-semestre && mkdir Temporaire/2019/2-semestre && mkdir Temporaire/2020 && mkdir Temporaire/2020/1-semestre && mkdir Temporaire/2020/2-semestre
-mkdir Projet && mkdir Projet/Projet-L3 && mkdir Projet/Projet-M1 && mkdir Projet/Projet-M2
+mkdir $HOME/Script && mkdir $HOME/Script/Rep_Perl && mkdir $HOME/Script/Rep_Shell && mkdir $HOME/Script/Rep_Shell/Rep_Sh && mkdir $HOME/Script/Rep_Shell/Rep_Ksh && mkdir $HOME/Script/Rep_Shell/Rep_Bash && mkdir $HOME/Script/Python
+mkdir $HOME/Temporaire && mkdir $HOME/Temporaire/2019 && mkdir $HOME/Temporaire/2019/1-semestre && mkdir $HOME/Temporaire/2019/2-semestre && mkdir $HOME/Temporaire/2020 && mkdir $HOME/Temporaire/2020/1-semestre && mkdir $HOME/Temporaire/2020/2-semestre
+mkdir $HOME/Projet && mkdir $HOME/Projet/Projet-L3 && mkdir $HOME/Projet/Projet-M1 && mkdir $HOME/Projet/Projet-M2
