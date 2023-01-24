@@ -1,0 +1,7 @@
+déroulez la recherche séqyebtuekke et ka recherche dichotomique avec
+
+11 22 34 55 67 89 112
+
+pour l'élement 104
+
+combien y a t'il de comparaisons dans les 2 cas?
