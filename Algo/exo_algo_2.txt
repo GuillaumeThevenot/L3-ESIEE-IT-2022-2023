@@ -1,0 +1,20 @@
+bble-sort pour le tableau 27 89 4 12
+
+l'algo regarde la case 1 : 27 < a 89 donc pas de changment
+l'algo regarde la case 2 : 89 > 4 donc il swap
+l'algo regarde la case 3 : 89 > 12 donc il swap
+l'algo regarde la case 4 : 89 - fin de tableau,
+27 4 12 89
+tour 2,
+l'algo regarde la case 1 : 27 > a 4 donc swap
+l'algo regarde la case 2 : 27 > a 12 donc swap
+l'algo regarde la case 3 : 27 < a 89 donc pas de changment
+l'algo regarde la case 4 : 89 - fin de tableau,
+4 12 27 89
+tour 3,
+l'algo regarde la case 1 : 4 < 12 donc pas de changment
+l'algo regarde la case 2 : 12 < 27 donc pas de changment
+l'algo regarde la case 3 : 27 < 89 donc pas de changment
+l'algo regarde la case 4 : 89 - fin de tableau
+
+tableau trié 4 12 27 89
