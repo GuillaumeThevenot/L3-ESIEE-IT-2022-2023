@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 void merge(int array1[], int array2[], int array3[], int num1, int num2, int num3) {
     int i = 0;
     int j = 0;

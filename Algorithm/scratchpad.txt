@@ -138,3 +138,59 @@ int main(){
     }
     return 0;
 }
+
+
+
+
+
+
+///////////////////////////////////////
+
+
+
+
+
+
+#include <stdio.h>
+
+int main(){
+    int array1[50];
+    int array2[50];
+    int array3[50];
+    int n1;
+    int n2;
+    int x;
+
+    int z;
+    int z2;
+    int y;
+    int y2;
+    int temp = n1 + n2;
+
+    printf("Taille du Array 1: ");
+    scanf("%d", &n1);    
+    printf("Taille du Array 2: ");
+    scanf("%d", &n2);    
+    for(x = 0; x < n1; x++) {
+        printf("valeur de la case no. %d de l'Array 1: ", x+1);
+        scanf("%d", &array1[x]);
+    }
+    for(x = 0; x < n2; x++) {
+        printf("valeur de la case no. %d de l'Array 2: ", x+1);
+        scanf("%d", &array2[x]);
+    }
+
+        for(z2 = 0; z2 < n1 + 1; z2++) {
+            array3[z] = array1[z];
+        }
+        for(y2 = n2; y2 < temp + 1; y2++){
+            array3[y] = array2[y];
+        }
+
+    printf("tableau trié: ");
+    for(x = 0; x < n1 + n2; x++)
+    {
+        printf("%d  ", array3[x]);
+    }
+    return 0;
+}

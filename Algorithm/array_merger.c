@@ -33,16 +33,16 @@ int main(){
     int n2;
     int x;
 
-    printf("Taille du Array 1 ");
+    printf("Taille du Array 1: ");
     scanf("%d", &n1);    
-    printf("Taille du Array 2 ");
+    printf("Taille du Array 2: ");
     scanf("%d", &n2);    
     for(x = 0; x < n1; x++) {
-        printf("valeur de la case no. %d:", x+1);
+        printf("valeur de la case no. %d de l'Array 1: ", x+1);
         scanf("%d", &array1[x]);
     }
     for(x = 0; x < n2; x++) {
-        printf("valeur de la case no. %d:", x+1);
+        printf("valeur de la case no. %d de l'Array 2: ", x+1);
         scanf("%d", &array2[x]);
     }
 

@@ -1,0 +1,3 @@
+fusionné les 2 tableaux
+trié
+afficher
