@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int insertionsort(int array[], int num){
     int x;
