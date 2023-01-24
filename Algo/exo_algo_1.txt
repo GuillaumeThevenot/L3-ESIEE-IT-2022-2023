@@ -1,7 +1,28 @@
-déroulez la recherche séqyebtuekke et ka recherche dichotomique avec
+déroulez la recherche séquentielle et ka recherche dichotomique avec
 
 11 22 34 55 67 89 112
 
 pour l'élement 104
 
 combien y a t'il de comparaisons dans les 2 cas?
+
+
+séquentielle :
+    11 = 104 ? non
+        22 = 104 ? non
+            34 = 104 ? non
+                55 = 104 ? non
+                    67 = 104 ? non
+                        89 = 104 ? non
+                            112 = 104 ? non
+                            pas de résultat
+
+l'algo a fait 7 tours sans trouver la valeur 104 dans le tableau
+
+dichotomique :
+
+divise le tableau en 2 : 55 < 104 donc
+89 < 104 puis
+112 > 104
+
+3 tours dans l'algo
