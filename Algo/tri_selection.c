@@ -1,40 +1,23 @@
 #include <stdio.h>
 
-void Swap(int *i, int *j){
-    int Temp;
-
-    Temp = *i;
-    *i = *j;
-    *j = Temp;
-}
-
-void bubbleSort(int array[], int num){
+int selectionsort(int array[], int num){
     int x;
     int y;
     int temp;
+    int min;
 
     for(x = 0; x < num - 1; x++) {    
-        for(y = 0; y < num - x - 1; y++) {    
-            if(array[y] > array[y + 1]) {
-                Swap(&array[y], &array[y + 1]);
+        min = x;
+        for(y = x + 1; y < num; y++) {    
+            if(array[y] < array[min]) {
+                min = y;
             }
         }
+        temp = array[x];
+        array[x] = array[min];
+        array[min] = temp;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 int main(){
     int array[50];
@@ -49,7 +32,7 @@ int main(){
         scanf("%d", &array[x]);
     }
 
-    bubbleSort(array, n);
+    selectionsort(array, n);
     printf("tableau trié: ");
     for(x = 0; x < n; x++)
     {
