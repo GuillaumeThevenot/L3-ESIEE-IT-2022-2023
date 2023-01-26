@@ -7,18 +7,19 @@ INSERT INTO Département (nDep,nomDep,taille,budget) VALUES (5,'Direction','5','
 INSERT INTO Salarié (nSal,nom,poste,salaire,nDep) VALUES (1,'Dupont','Directeur','9600',5);
 INSERT INTO Salarié (nSal,nom,poste,salaire,nDep) VALUES (2,'Aubert','Chef de projet','5400',1);
 INSERT INTO Salarié (nSal,nom,poste,salaire,nDep) VALUES (3,'Martin','Chef de projet','6200',3);
-INSERT INTO Salarié (nSal,nom,poste,salaire,nDep) VALUES (4,'Blanc','Chef de projet','4500',4);
+INSERT INTO Salarié (nSal,nom,poste,salaire,nDep) VALUES (4,'Blanc','Chef de projet','2500',4);
 INSERT INTO Salarié (nSal,nom,poste,salaire,nDep) VALUES (5,'Vincent','Chef de projet','4300'2);
 
 
-INSERT INTO Enfant (nEnfant,nSal,dateNaiss,sexe) VALUES (1,1,'2000','F');
-INSERT INTO Enfant (nEnfant,nSal,dateNaiss,sexe) VALUES (2,1,'2002','H');
-INSERT INTO Enfant (nEnfant,nSal,dateNaiss,sexe) VALUES (3,2,'2000','F');
-INSERT INTO Enfant (nEnfant,nSal,dateNaiss,sexe) VALUES (4,2,'2002','H');
-INSERT INTO Enfant (nEnfant,nSal,dateNaiss,sexe) VALUES (5,3,'2000','F');
+INSERT INTO Enfant (nEnfant,nSal,dateNaiss,sexe) VALUES (1,1,'10/02/2010','F');
+INSERT INTO Enfant (nEnfant,nSal,dateNaiss,sexe) VALUES (2,1,'23/07/2007','F');
+INSERT INTO Enfant (nEnfant,nSal,dateNaiss,sexe) VALUES (3,2,'15/12/2015','F');
+INSERT INTO Enfant (nEnfant,nSal,dateNaiss,sexe) VALUES (4,3,'20/12/2018','F');
+INSERT INTO Enfant (nEnfant,nSal,dateNaiss,sexe) VALUES (5,3,'04/04/2018','F');
+
 
 INSERT INTO Jouet (nJouet,description,type,prix) VALUES (1,'Poupée','Loisir','20');
-INSERT INTO Jouet (nJouet,description,type,prix) VALUES (2,'Voiture','Loisir','30');
+INSERT INTO Jouet (nJouet,description,type,prix) VALUES (2,'Lego','Loisir','80');
 INSERT INTO Jouet (nJouet,description,type,prix) VALUES (3,'Puzzle','Educatif','10');
 INSERT INTO Jouet (nJouet,description,type,prix) VALUES (4,'Poupée','Loisir','20');
 INSERT INTO Jouet (nJouet,description,type,prix) VALUES (5,'Voiture','Loisir','30');

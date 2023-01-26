@@ -17,7 +17,7 @@ CREATE TABLE Salarié (
 CREATE TABLE Enfant (
     nEnfant  INT (10)  PRIMARY KEY,
     nSal   INT (10)  NOT NULL,
-    dateNaiss    INT (10) NOT NULL,
+    dateNaiss    DATE NOT NULL,
     sexe CHAR (20) NOT NULL,
     FOREIGN KEY (nSal) REFERENCES Salarié (nSal) 
 );
