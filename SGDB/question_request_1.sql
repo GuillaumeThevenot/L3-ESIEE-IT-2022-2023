@@ -68,14 +68,10 @@ WHERE Achat.nVet = Vetement.nVet AND Vetement.type = 'veste';
 
 SELECT achat.dateAchat
 FROM Achat, Vetement
-WHERE Achat.nVet = Vetement.nVet AND Vetement.type = 'veste' AND Vetement.prix = (SELECT MAX(vetement.prix) FROM Vetement WHERE vetement.type = 'veste');
+WHERE Achat.nVet = Vetement.nVet AND Vetement.type = 'veste' AND Vetement.prix = (  SELECT MAX(vetement.prix)
+                                                                                    FROM vetement,achat
+                                                                                    WHERE Achat.nVet = Vetement.nVet AND vetement.type = 'veste');
 
--- 2eme solution
-
-SELECT dateAchat,prix
-FROM Achat
-JOIN Vetement ON Achat.nVet = Vetement.nVet
-WHERE Vetement.type = 'veste' AND Vetement.prix =(SELECT MAX(prix)FROM Achat JOIN Vetement on Achat.nVet = Vetement.nVet WHERE Vetement.type = 'veste')
 
 --============================================================================================================================================================
 --5 : Nom des clients ayant acheté des vêtements dont la couleur contient le mot rose (par exemple rose vif, rose pâle, vieux rose), triés par prix décroissant de ces vêtements.
