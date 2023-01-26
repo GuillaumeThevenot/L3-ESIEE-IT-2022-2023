@@ -69,5 +69,22 @@ ORDER BY prix DESC;
 
 
 --============================================================================================================================================================
---9 : 
+--9 : Date de naissance des filles qui ont commandé les jouts de type éducatif
+
+SELECT Enfant.dateNaiss
+FROM Enfant, Commande, Jouet
+WHERE Enfant.nEnfant = Commande.nEnfant AND Commande.nJouet = Jouet.nJouet AND Enfant.sexe = 'F' AND Jouet.type = 'Educatif';
+
+
+--============================================================================================================================================================
+--10 : budget des départements dont les salariés ont un salaire plus haut que la moyenne des salaires
+
+SELECT Département.nomDep, departement.budget
+FROM Département, Salarié
+WHERE Département.nDep = Salarié.nDep AND Salarié.salaire > (SELECT AVG(salaire) FROM Salarié)
+GROUP BY Département.nomDep, departement.budget;
+
+
+
+
 
