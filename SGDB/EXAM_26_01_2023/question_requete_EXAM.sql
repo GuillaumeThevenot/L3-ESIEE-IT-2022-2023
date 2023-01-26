@@ -21,7 +21,7 @@ FROM Salarié,Département,Enfant
 WHERE département.nDep = Salarié.nDep AND Enfant.nSal = Salarié.nSal  AND (Enfant.sexe = 'F' AND Enfant.dateNaiss > '01/01/2018') AND
     Salarié.nSal IN ( SELECT nSal
                     FROM Salarié, Département, Enfant
-					WHERE département.nDep = Salarié.nDep AND Enfant.nSal = Salarié.nSal  AND (Enfant.sexe = 'M' AND Enfant.dateNaiss > '01/01/2018'));
+					WHERE département.nDep = Salarié.nDep AND Enfant.nSal = Salarié.nSal  AND (Enfant.sexe = 'H' AND Enfant.dateNaiss > '01/01/2018'));
 
 
 --============================================================================================================================================================
@@ -64,7 +64,7 @@ HAVING prixTotal > 100;
 
 SELECT type, prix
 FROM Jouet, Commande, Enfant
-WHERE Jouet.nJouet = Commande.nJouet AND Commande.nEnfant = Enfant.nEnfant AND Enfant.sexe = 'M' AND Jouet.description LIKE '%Lego%'
+WHERE Jouet.nJouet = Commande.nJouet AND Commande.nEnfant = Enfant.nEnfant AND Enfant.sexe = 'H' AND Jouet.description LIKE '%Lego%'
 ORDER BY prix DESC;
 
 
