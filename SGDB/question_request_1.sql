@@ -16,37 +16,50 @@ WHERE (Stock.nVet = Vetement.nVet) AND (Stock.nBout = Boutique.nBout) AND ((Vete
 //============================================================================================================================================================
 //2 : Ville de résidence des clients ayant effectué des achats dans les boutiques de Paris OU de Lyon
 
-SELECT DISTINCT villeCli
+SELECT DISTINCT villeCli, Client.nom
 FROM Achat,Boutique,Client
-WHERE (Achat.nBout = Boutique.nBout) AND (Achat.nCli = Client.nCli) AND ((Boutique.nBout= 1) OR (Boutique.nBout = 5));
+WHERE Boutique.nBout = Achat.nBout AND Client.nCli = Achat.nCli 
+    AND (Boutique.villeBout = 'paris' OR Boutique.villeBout = 'lyon');
 
 
 //============================================================================================================================================================
 //2bis : Ville de résidence des clients ayant effectué des achats dans les boutiques de Paris ET de Lyon
 
-SELECT DISTINCT villeCli
+SELECT DISTINCT villeCli, Client.nom
 FROM Achat,Boutique,Client
-WHERE (Achat.nBout = Boutique.nBout) AND (Achat.nCli = Client.nCli) AND ((Boutique.nBout= 1) AND (Boutique.nBout = 5));
+WHERE Boutique.nBout = Achat.nBout AND Client.nCli = Achat.nCli  AND Boutique.villeBout = 'paris' AND
+    achat.nCli IN ( SELECT nCli
+                    FROM Achat, Boutique
+                    WHERE Boutique.nBout = Achat.nBout AND Boutique.villeBout = 'lyon');
 
 
 //============================================================================================================================================================
 //3 : Adresse et ville des boutiques ayant vendu des vêtements de taille XL
 
-SELECT Boutique.adr, Boutique.villeBout
+SELECT DISTINCT Boutique.adr, Boutique.villeBout, vetement.taille
 FROM Achat, Boutique, Vetement
-WHERE (Achat.nBout = Boutique.nBout) AND (Achat.nVet = Vetement.nVet) AND (Vetement.taille = 'XL');
+WHERE Achat.nBout = Boutique.nBout AND Achat.nVet = Vetement.nVet
+    AND Vetement.taille = 'XL';
 
 
 //============================================================================================================================================================
 //3bis : Adresse et ville des boutiques n’ayant vendu que des vêtements de taille XL
 
-SELECT Boutique.adr, Boutique.villeBout
-FROM Achat,Vetement,Boutique
-WHERE (Achat.nBout = Boutique.nBout) AND (Achat.nVet = Vetement.nVet) AND (Vetement.taille = 'XL') AND NOT EXISTS ( SELECT nVet
-                                                                                                                    FROM Vetement
-                                                                                                                    WHERE Vetement.taille != 'XL');
-WHERE NOT EXISTS (SELECT nVet FROM Vetement WHERE Vetement.taille != 'XL')
+SELECT DISTINCT Boutique.adr, Boutique.villeBout, vetement.taille
+FROM Achat, Vetement, Boutique
+WHERE Achat.nBout = Boutique.nBout AND Achat.nVet = Vetement.nVet
+    AND vetement.taille = 'XL'
+    AND achat.nBout NOT IN (SELECT achat.nBout
+                            FROM achat, vetement
+                            WHERE achat.nVet = vetement.nVet AND vetement.taille <> 'XL');
 
+
+//============================================================================================================================================================
+//4 : Les dates d’achat et les prix des veste
+
+SELECT dateAchat, prix
+FROM Achat, Vetement
+WHERE Achat.nVet = Vetement.nVet AND Vetement.type = 'veste';
 
 
 //============================================================================================================================================================
