@@ -114,4 +114,4 @@ SELECT Client.nom, SUM(Vetement.prix * Achat.qtteAchat)
 FROM Achat, Vetement, Client
 WHERE Achat.nVet = Vetement.nVet AND Achat.nCli = Client.nCli
 GROUP BY Client.nom
-HAVING COUNT(*) > 5;
+HAVING COUNT(achat.nCli) > 5;
