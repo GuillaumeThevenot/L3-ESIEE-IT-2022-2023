@@ -64,7 +64,6 @@ class Liste:
             l.tete = self.tete
             l.queue = self.queue.copy()
             return l
-    
 
 
 l3 = Liste()
