@@ -65,6 +65,14 @@ class Liste:
             l.queue = self.queue.copy()
             return l
 
+    def nieme(self, n):
+        if self.estvide():
+            return
+        else:
+            if n == 0:
+                return self.tete
+            else:
+                return self.queue.nieme(n-1)
 
 l3 = Liste()
 
