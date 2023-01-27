@@ -4,7 +4,7 @@ class Liste:
         self.tete = 0
         self.queue = None
 
-    def creerliste(self, e):
+    def creerListe(self, e):
         self.tete = e
         self.queue = None
         return self
@@ -34,7 +34,7 @@ class Liste:
         if self.estvide():
             self.creerliste(e)
         else:
-            self.queue.ajouter(e)
+            self.queue.add(e)
 
     def dell(self, e):
         if self.estvide():
@@ -44,7 +44,7 @@ class Liste:
                 self.tete = self.queue.tete
                 self.queue = self.queue.queue
             else:
-                self.queue.supprimer(e)
+                self.queue.dell(e)
     
     def add(self, e, n):
         if self.estvide():
@@ -58,15 +58,15 @@ class Liste:
     
 
 
-#l3 = Liste()
+l3 = Liste()
 
-#l1 = Liste()
-#l1.creerListe(1)
+l1 = Liste()
+l1.creerListe(1)
 
-#l2 = Liste()
-#l2.creerListe(2)
-#l2.Queue = l1
-#l2.setqueue(l1)
+l2 = Liste()
+l2.creerListe(2)
+l2.queue = l1
+l2.setQueue(l1)
 
-#print(l2.tete)
-#print(l2.getTete())
+print(l2.tete)
+print(l2.getTete())
