@@ -55,6 +55,17 @@ class Liste:
                 self.queue = self.queue
             else:
                 self.queue.add(e, n-1)
+        
+    def copy(self):
+        if self.estvide():
+            return Liste()
+        else:
+            l = Liste()
+            l.tete = self.tete
+            l.queue = self.queue.copy()
+            return l
+    
+    
     
 
 
