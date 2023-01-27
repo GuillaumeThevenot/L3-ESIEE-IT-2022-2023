@@ -22,20 +22,6 @@ void bubbleSort(int array[], int num){
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 int main(){
     int array[50];
     int n;
